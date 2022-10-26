@@ -51,7 +51,7 @@ int[,] matrix = CreateMatrix(5, 5, 1, 10); // вводим размер матр
 PrintMatrix(matrix); // выводим сгенерированную матрицу
 System.Console.WriteLine(); // переход на новую строку
 int sumDigonalElement = SumDigonalElement(matrix);
-System.Console.WriteLine($"{sumDigonalElement}")
+System.Console.WriteLine($"{sumDigonalElement}");
 System.Console.WriteLine(); // переход на новую строку
 
 
