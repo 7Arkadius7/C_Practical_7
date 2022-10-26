@@ -10,11 +10,6 @@ Console.WriteLine("Пожалуйста, введите максимально �
 int maximal = Convert.ToInt32(Console.ReadLine());
 
 
-Console.WriteLine("Пожалуйста, введите номер строки матрицы");
-int rowsNum = Convert.ToInt32(Console.ReadLine()) - 1;
-Console.WriteLine("Пожалуйста, введите номер столбца матрицы");
-int columsNum = Convert.ToInt32(Console.ReadLine()) - 1;
-
 int[,] matrix = CreateMatrix(rowsMatrix, columsMatrix, minimal, maximal);
 
 int[,] CreateMatrix(int rows, int colums, int min, int max)
@@ -45,18 +40,20 @@ void PrintMatrix(int[,] matr)
     }
 }
 
+void AverageColums(int[,] matr)
+{
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        double sum = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum += matrix[i, j];
+        }
+        double average = sum / matrix.GetLength(0);
+        Console.Write($"{average:F1} ");
+    }
+}
+
 PrintMatrix(matrix);
 System.Console.WriteLine();
-
-
-if (rowsNum < 0 || rowsNum > matrix.GetLength(0) - 1 || columsNum < 0 || columsNum > matrix.GetLength(1) - 1)
-{
-    Console.WriteLine("Такого элемента в массиве нет");
-}
-else
-{
-    Console.WriteLine($"Значение заданного элемента массива -> {matrix[rowsNum, columsNum]}");
-}
-
-
-
+AverageColums(matrix);
