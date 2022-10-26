@@ -45,11 +45,11 @@ int[,] GetSquareElement(int[,] matr)
 }
 
 
-int[,] matrix = CreateMatrix(3, 4, 1, 10); // вводим размер матрицы данных
+int[,] matrix = CreateMatrix(5, 5, 1, 10); // вводим размер матрицы данных
 PrintMatrix(matrix); // выводим сгенерированную матрицу
 System.Console.WriteLine(); // переход на новую строку
-int[,] squarematrix = GetSquareElement(matrix);
-PrintMatrix(squarematrix); // выводим сгенерированную матрицу
+int[,] squareElementMatrix = GetSquareElement(matrix);
+PrintMatrix(squareElementMatrix); // выводим сгенерированную матрицу
 System.Console.WriteLine(); // переход на новую строку
 
 
